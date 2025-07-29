@@ -1,0 +1,13 @@
+type Event {
+    id: ID
+    name: String!
+    startTime: String!
+    endTime: String!
+    venues: [Venue!]
+}
+
+input SaveEventInput {
+    name: String!
+    startTime: String!
+    endTime: String!
+}
