@@ -3,3 +3,9 @@ server.port: 20101
 logging.level:
   root: INFO
   com.netflix: DEBUG
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
