@@ -24,10 +24,10 @@ class VenuePgDao implements VenueSot {
 
     @Override
     public Optional<Venue> getVenueById(FullExternalId externalId) {
-        Optional.of(externalId)
+        return Optional.of(externalId)
                 .map(mapper::asPk)
-                .flatMap(repository::findById);
-        return Optional.empty();
+                .flatMap(repository::findById)
+                .map(mapper::asModel);
     }
 
     @EventListener
